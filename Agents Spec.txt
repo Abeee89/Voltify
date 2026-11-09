@@ -1,0 +1,169 @@
+# TASK: Establish Project-Wide AI Agent Instructions
+
+You are a Senior Software Architect and AI Engineering Lead.
+
+Your task is to establish the project-wide working rules for the AI-Powered Electrical Learning Platform for Grade X SMK, subject Dasar-Dasar Teknik Ketenagalistrikan.
+
+## 1. Primary Objective
+
+Create a root-level `AGENTS.md` that defines how AI coding agents must operate throughout the project.
+
+The project uses a documentation-first and phase-based development workflow.
+
+The workflow consists of three primary modes:
+
+1. SPECIFY MODE
+2. BUILD MODE
+3. TEST MODE
+
+## 2. Mandatory Project Rules
+
+- Documentation is the primary source of truth.
+- Never invent requirements, business rules, API contracts, database structures, or design decisions.
+- Never silently change an approved requirement.
+- Never implement a feature that has not been approved.
+- Never work on multiple unrelated chapters in one task.
+- Always inspect the active chapter specification before modifying code.
+- Read only the files relevant to the active task and its direct dependencies.
+- Do not reread the entire documentation repository unless explicitly necessary.
+- Preserve existing working features.
+- Do not introduce dependencies without checking the approved architecture and recording the reason.
+- Never expose secrets, API keys, credentials, or private student information.
+- Use Indonesian for user-facing educational content unless the project documentation specifies otherwise.
+- Use English for code identifiers and technical documentation unless an existing convention requires otherwise.
+- Avoid unnecessary abstractions, speculative features, and premature optimization.
+
+## 3. SPECIFY MODE
+
+When operating in SPECIFY MODE:
+
+- Analyze the requested phase or chapter.
+- Inspect only the relevant approved documentation and dependencies.
+- Identify missing information, ambiguity, conflicts, and assumptions.
+- Create or update specifications before implementation.
+- Define scope, non-goals, requirements, dependencies, data needs, API contracts, acceptance criteria, edge cases, and risks.
+- Assign stable requirement and specification IDs.
+- Update the traceability matrix.
+- Do not modify application source code.
+- Do not install dependencies.
+- Do not create migrations or database schemas unless the task explicitly belongs to an approved implementation chapter.
+- Stop and request approval when specifications are complete.
+
+## 4. BUILD MODE
+
+When operating in BUILD MODE:
+
+- Implement exactly one approved chapter per task.
+- Read the chapter specification and its direct dependencies.
+- Follow approved architecture, UI/UX, database, and API contracts.
+- Implement only the scope of the active chapter.
+- Do not implement future chapters.
+- Do not redesign approved architecture without approval.
+- Use existing project conventions and reusable components.
+- Validate inputs and handle errors.
+- Implement authorization on the server side.
+- Protect student data and teacher/admin permissions.
+- Keep AI output separate from deterministic electrical calculations.
+- Do not let an LLM perform authoritative electrical circuit calculations.
+- Add or update tests for implemented behavior.
+- Update implementation documentation and chapter status.
+- Do not claim completion when tests have not passed.
+- Stop after the chapter is implemented and its required tests are executed.
+
+## 5. TEST MODE
+
+When operating in TEST MODE:
+
+- Test only the active chapter and its direct integration boundaries.
+- Read the chapter acceptance criteria and test specification.
+- Execute the appropriate unit, integration, API, component, accessibility, security, or E2E tests.
+- Test positive, negative, boundary, authorization, and error scenarios.
+- Verify calculations against known electrical formulas and reference cases when testing simulation features.
+- Never modify production implementation merely to make a test pass without understanding the failure.
+- Report failed tests and reproducible steps.
+- Fix only defects within the approved chapter scope when explicitly instructed.
+- Update test results and regression records.
+- Do not claim that untested features are verified.
+
+## 6. Documentation Requirements
+
+For every chapter:
+
+- Maintain a chapter specification.
+- Maintain acceptance criteria.
+- Maintain implementation notes.
+- Maintain test cases and test results.
+- Record deviations from the specification.
+- Record architectural decisions when necessary.
+- Update traceability status.
+
+Documentation must distinguish:
+- Planned
+- Approved
+- In Progress
+- Implemented
+- Tested
+- Verified
+- Deferred
+- Blocked
+
+## 7. Electrical Education and Safety Rules
+
+- Align educational content with the currently applicable official CP and the school's approved ATP.
+- Distinguish mandatory curriculum content from enrichment content.
+- Treat electrical safety and K3 as mandatory considerations.
+- Label ideal assumptions in simulations.
+- Do not present virtual simulations as substitutes for physical laboratory verification.
+- Never provide unsafe instructions for working with energized or high-voltage equipment.
+- Use deterministic and testable calculation logic for electrical simulations.
+- Require teacher review for educational content that affects formal assessment or safety.
+
+## 8. Token-Efficient Workflow
+
+Before every task:
+1. Identify the active phase and chapter.
+2. Read `AGENTS.md`.
+3. Read the active chapter specification.
+4. Read only directly relevant dependencies.
+5. Check the chapter tracker.
+6. Execute the requested mode.
+
+At the end:
+1. Summarize files read.
+2. Summarize files created or modified.
+3. Report implementation or testing results.
+4. Report unresolved issues.
+5. Update the chapter tracker.
+6. State the next permitted action.
+
+Do not produce long explanations unrelated to the active task.
+
+## 9. Approval Gates
+
+- Planning requires user approval before Build.
+- Build requires an approved chapter specification.
+- Testing must be completed before a chapter is marked verified.
+- Phase integration testing must pass before phase closure.
+- The next phase cannot begin without explicit user approval.
+
+## 10. Final Response Format
+
+Every task must end with:
+
+- Mode:
+- Phase:
+- Chapter:
+- Status:
+- Scope completed:
+- Files created:
+- Files modified:
+- Tests executed:
+- Test results:
+- Deviations:
+- Blockers:
+- Documentation updated:
+- Recommended next action:
+
+Do not continue to another chapter automatically.
+
+These rules apply to all future AI agent sessions in this repository.
